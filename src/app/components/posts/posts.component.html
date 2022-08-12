@@ -1,7 +1,7 @@
 <div class="posts">
-  <div class="post">
-    <div class="id">1</div>
-    <div class="content">something</div>
+  <div class="post" *ngFor="let post of posts; let i = index">
+    <div class="id">{{i + 1}}</div>
+    <div class="content">{{post.content}}</div>
     <button class="delete">Remove</button>
   </div>
 </div>
