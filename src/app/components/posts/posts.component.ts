@@ -14,9 +14,26 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.posts = [
-      {content: "First post"},
-      {content: "Second post"}
+      {
+        content: "First post",
+        liked: false
+      },
+      {
+        content: "Second post",
+        liked: false
+      }
     ]
+  }
+
+  toggleLike(id:number) {
+    this.posts.map((v, i) => {
+      if(i == id) v.liked = !v.liked;
+      return v;
+    })
+  }
+
+  deletePost(id:number) {
+    this.posts = this.posts.filter((v, i) => i !== id);
   }
 
 }

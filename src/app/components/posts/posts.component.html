@@ -1,7 +1,7 @@
 <div class="posts">
-  <div class="post" *ngFor="let post of posts; let i = index">
+  <div class="post" *ngFor="let post of posts; let i = index;" class="post {{(post.liked ? 'liked' : '')}}">
     <div class="id">{{i + 1}}</div>
-    <div class="content">{{post.content}}</div>
-    <button class="delete">Remove</button>
+    <div class="content" (click)="toggleLike(i)">{{post.content}}</div>
+    <button class="delete" (click)="deletePost(i)">Remove</button>
   </div>
 </div>
