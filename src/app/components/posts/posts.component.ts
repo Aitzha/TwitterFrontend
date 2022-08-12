@@ -36,4 +36,13 @@ export class PostsComponent implements OnInit {
     this.posts = this.posts.filter((v, i) => i !== id);
   }
 
+  addPost(inputPost:String) {
+    this.posts.push({
+      content: inputPost,
+      liked: false
+    });
+
+    inputPost = "";
+  }
+
 }
