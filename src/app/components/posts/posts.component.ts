@@ -22,14 +22,23 @@ export class PostsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    //Temporary posts
     this.posts = [
       {
+        from: "localhost",
         content: "First post",
-        liked: false
+        liked: false,
+        likesCount: 0,
+        createdTime: new Date(),
+        image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
       },
       {
+        from: "localhost",
         content: "Second post",
-        liked: false
+        liked: false,
+        likesCount: 0,
+        createdTime: new Date(),
+        image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
       }
     ]
 
@@ -52,8 +61,12 @@ export class PostsComponent implements OnInit {
 
   addPost(inputPost:String) {
     this.posts.push({
+      from: "localhost",
       content: inputPost,
-      liked: false
+      liked: false,
+      likesCount: 0,
+      createdTime: new Date(),
+      image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
     });
 
     inputPost = "";
