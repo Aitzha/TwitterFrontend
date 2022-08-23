@@ -59,17 +59,17 @@ export class PostsComponent implements OnInit {
     this.posts = this.posts.filter((v, i) => i !== id);
   }
 
-  addPost(inputPost:String) {
+  addPost(inputPost:HTMLInputElement) {
     this.posts.push({
       from: "localhost",
-      content: inputPost,
+      content: inputPost.value,
       liked: false,
       likesCount: 0,
       postedDate: new Date(),
       image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
     });
 
-    inputPost = "";
+    inputPost.value = "";
   }
 
   getHello() {
