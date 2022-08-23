@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostModel } from './../../models/PostModel'
+import { PostsComponent} from "../../components/posts/posts.component";
 
 @Component({
   selector: 'app-postTemplate',

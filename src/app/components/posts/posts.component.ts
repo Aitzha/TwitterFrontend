@@ -29,7 +29,7 @@ export class PostsComponent implements OnInit {
         content: "First post",
         liked: false,
         likesCount: 0,
-        createdTime: new Date(),
+        postedDate: new Date(),
         image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
       },
       {
@@ -37,7 +37,7 @@ export class PostsComponent implements OnInit {
         content: "Second post",
         liked: false,
         likesCount: 0,
-        createdTime: new Date(),
+        postedDate: new Date(),
         image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
       }
     ]
@@ -65,7 +65,7 @@ export class PostsComponent implements OnInit {
       content: inputPost,
       liked: false,
       likesCount: 0,
-      createdTime: new Date(),
+      postedDate: new Date(),
       image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
     });
 

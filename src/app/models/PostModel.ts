@@ -3,6 +3,6 @@ export class PostModel {
   content!:String;
   liked!:Boolean;
   likesCount!: number;
-  createdTime!:Date;
+  postedDate!:Date;
   image!:String;
 }
