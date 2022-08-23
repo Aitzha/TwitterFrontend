@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from "./../../models/Post";
+import { PostModel } from "../../models/PostModel";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { PostTemplateComponent } from './../../templates/post/postTemplate.component';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { map } from 'rxjs/operators';
 })
 export class PostsComponent implements OnInit {
 
-  posts!:Post[];
+  posts!:PostModel[];
 
   public test:boolean = false;
   public curStatus:number = 404;
@@ -65,9 +66,9 @@ export class PostsComponent implements OnInit {
     //   this.message = data;
     // });
 
-    return this.http.get('http://localhost:8080/hello',
-      {headers: new HttpHeaders('Access-Control-Allow-Origin'), responseType: "text", observe: "response"})
-      .subscribe(data => {this.message = data.statusText;});
+    // return this.http.get('http://localhost:8080/hello',
+    //   {headers: new HttpHeaders('Access-Control-Allow-Origin'), responseType: "text", observe: "response"})
+    //   .subscribe(data => {this.message = data.statusText;});
 
   }
 }
