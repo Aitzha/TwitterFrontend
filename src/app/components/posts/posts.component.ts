@@ -50,7 +50,13 @@ export class PostsComponent implements OnInit {
 
   toggleLike(id:number) {
     this.posts.map((v, i) => {
-      if(i == id) v.liked = !v.liked;
+
+      if(i == id) {
+        v.liked = !v.liked;
+        if(v.liked) v.likesCount += 1;
+        if(!v.liked) v.likesCount -= 1;
+      }
+
       return v;
     })
   }
@@ -66,7 +72,7 @@ export class PostsComponent implements OnInit {
       liked: false,
       likesCount: 0,
       postedDate: new Date(),
-      image: "src/app/img/Screen Shot 2022-05-25 at 13.41.21.png"
+      image: ""
     });
 
     inputPost.value = "";
