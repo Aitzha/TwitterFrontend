@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://twitter-bucket-2708.s3.eu-central-1.amazonaws.com/test.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220905T061001Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=AKIAYESCOPVACYRDXEFP%2F20220905%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Signature=3005ed0e6f9c4f10a3e244563fd6a3ac3f8b8249b066031ea2248908bdb133da",
+    "secure": false
+  }
+}

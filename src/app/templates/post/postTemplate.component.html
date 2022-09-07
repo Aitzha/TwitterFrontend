@@ -1,7 +1,11 @@
-<h1  class="from">from: {{info.from}}</h1>
+<h1  class="from">from: {{info.ownerId}}</h1>
 <h1 class="content"> content: {{ info.content}}</h1>
-<p class="liked">liked: {{ info.liked }}</p>
+<!--<p class="liked">liked: {{ info.liked }}</p>-->
 <p class="likes">likes: {{info.likesCount}}</p>
 <p class="postedDate">Posted date: {{info.postedDate | date}}</p>
-<img src="./assets/DLSZLtLQ_400x400.jpeg" alt="image">
+<!--<img src="./assets/DLSZLtLQ_400x400.jpeg" alt="image">-->
+<!--<img src="{{info.image}}"/>-->
+<!--<img src="data:image/jpeg,<{{info.image}}>"/>-->
+<!--<img src="data:image/jpeg;base64,{{info.imageURL.result}}"/>-->
+<img src={{info.imageURL}} alt="place holder sorry"/>
 

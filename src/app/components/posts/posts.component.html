@@ -9,16 +9,16 @@
     />
     <input type="submit" value="Add PostModel" class="post-submit" (click)="addPost(inputPost);"/>
   </form>
-  <div class="post" *ngFor="let post of posts; let i = index;" class="post {{(post.liked ? 'liked' : '')}}">
+  <div class="post" *ngFor="let post of posts; let i = index;">
     <div class="id">{{i + 1}}</div>
-    <app-postTemplate [info]=post (click)="toggleLike(i)"> </app-postTemplate>
+    <app-postTemplate [info]=post> </app-postTemplate>
     <button class="delete" (click)="deletePost(i)">Remove</button>
   </div>
-  <div class="httpRequests">
-    <div class="httpsGetRequest">
-      <button class="send" (click)="getHello()">SendGet</button>
-      <div class="check">{{message}}</div>
-    </div>
-  </div>
+<!--  <div class="httpRequests">-->
+<!--    <div class="httpsGetRequest">-->
+<!--      <button class="send" (click)="getHello()">SendGet</button>-->
+<!--      <div class="check">{{message}}</div>-->
+<!--    </div>-->
+<!--  </div>-->
 
 </div>
