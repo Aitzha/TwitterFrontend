@@ -115,7 +115,7 @@ export class PostsComponent implements OnInit {
   }
 
   getPosts(): Observable<any>{
-    return this.httpClient.get("//3.120.34.233:8080/post", {responseType: "json", observe: "body"});
+    return this.httpClient.get("https://sleepy-crag-50454.herokuapp.com/post", {responseType: "json", observe: "body"});
   }
 
   getHello() {
