@@ -2,12 +2,22 @@
   <form>
     <input
       type="text"
-      name="inputPost"
-      placeholder="Enter post..."
-      class="post-input"
-      #inputPost
+      name="inputText"
+      placeholder="Enter text..."
+      #inputText
     />
-    <input type="submit" value="Add PostModel" class="post-submit" (click)="addPost(inputPost);"/>
+    <input
+      type="text"
+      name="inputUserId"
+      placeholder="Enter userId..."
+      #inputUserId
+    />
+    <input
+      type="file"
+      name="inputFile"
+      #inputFile
+    />
+    <input type="submit" value="Add new post" class="post-submit" (click)="addPost(inputText, inputUserId, inputFile);"/>
   </form>
   <div class="post" *ngFor="let post of posts; let i = index;">
     <div class="id">{{i + 1}}</div>
