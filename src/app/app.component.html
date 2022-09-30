@@ -1,9 +1,10 @@
 <div class="app">
   <header>
-    <h1>Welcome to the Twitter</h1>
   </header>
   <body>
-  <app-posts></app-posts>
+    <button (click)="openToggle(&quot;post&quot;)">Post page</button>
+    <button (click)="openToggle(&quot;home&quot;)">Home page</button>
+    <router-outlet></router-outlet>
   </body>
 </div>
 

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
+import {PostsComponent} from "./components/posts/posts.component"
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularCLItest';
+
+  constructor(private router: Router) {}
+
+  openToggle(path:String) {
+    this.router.navigateByUrl('/' + path);
+  }
 }
