@@ -7,13 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostTemplateComponent } from './templates/post/postTemplate.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     PostTemplateComponent,
-    HomeComponent
+    HomeComponent,
+    RegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
